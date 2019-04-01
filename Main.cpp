@@ -5,40 +5,40 @@ using namespace std;
 
 int main() {
 	try{
-		Queue<int> a(10);
+		Queue<int> a(8);
 		int* correct1 = new int(4);
 		int* correct2 = new int(8);
 
-		a.enQueue(a, 2);
-		a.enQueue(a, 7);
-		a.enQueue(a, 0);
-		a.enQueue(a, 4);
-		a.enQueue(a, 1);
-		a.enQueue(a, 9);
-		a.enQueue(a, 9);
-		a.enQueue(a, 9);
+		a.enQueue(2);
+		/*a.enQueue(7);
+		a.enQueue(0);
+		a.enQueue(4);
+		a.enQueue(1);
+		a.enQueue(9);
+		a.enQueue(9);
+		a.enQueue(9);*/
 
 		correct1[0] = 2;
 		correct1[1] = 7;
 		correct1[2] = 0;
 		correct1[3] = 4;
 
-		cout << a.deQueue(a);
-		a.deQueue(a);
-		a.deQueue(a);
-		a.deQueue(a);
+		cout << a.deQueue() << endl;
+		/*a.deQueue();
+		a.deQueue();
+		a.deQueue();*/
 
 		/*for (int i = 0; i < 4; i++) { 
-			assert(a.deQueue(a) == correct1[i]);
+			assert(a.deQueue() == correct1[i]);
 		}
 		cout << "First test passed" << endl;*/
 
 		cout << "Huh very soon ^o^" << endl;
-		a.enQueue(a, 5);
-		a.enQueue(a, 9);
-		a.enQueue(a, 2);
-		a.enQueue(a, 8);
-
+		/*a.enQueue(5);
+		a.enQueue(9);
+		a.enQueue(2);
+		a.enQueue(8);
+*/
 		correct2[0] = 1;
 		correct2[1] = 9;
 		correct2[2] = 9;
@@ -49,7 +49,7 @@ int main() {
 		correct2[7] = 8;
 
 		/*for (int i = 0; i < 8; i++) {
-			assert(a.deQueue(a) == correct2[i]);
+			assert(a.deQueue() == correct2[i]);
 		}
 		cout << "Second test passed" << endl;*/
 
